@@ -39,7 +39,7 @@ st.markdown(
 st.title("💪 BMI Calculator 😃")
 
 # Instructions
-st.markdown("## 📝 Apna **Weight** aur **Height** enter karein!")
+st.markdown("## 📝 Enter your **weight** and **height** please!")
 
 # Input fields
 col1, col2 = st.columns(2)
@@ -53,17 +53,17 @@ with col2:
 # Calculate BMI when inputs are valid
 if height > 0 and weight > 0:
     bmi = weight / (height ** 2)  # BMI Formula
-    st.markdown(f'<div class="bmi-box">🎯 Apka BMI Hai: {bmi:.2f} </div>', unsafe_allow_html=True)
+    st.markdown(f'<div class="bmi-box">🎯 your BMI is: {bmi:.2f} </div>', unsafe_allow_html=True)
 
     # BMI Categories
     if bmi < 18.5:
-        st.warning("⚠️ Underweight – Thora zyada kha lena! 🍔")
+        st.warning("⚠️ Underweight – Eat well! 🍔")
     elif 18.5 <= bmi < 24.9:
         st.success("✅ Normal Weight – Perfect! 💪😎")
     elif 25 <= bmi < 29.9:
-        st.warning("⚠️ Overweight – Exercise zaroori hai! 🏃‍♂️")
+        st.warning("⚠️ Overweight – Must do exercise! 🏃‍♂️")
     else:
-        st.error("🚨 Obesity – Health ka khayal rakho! 🏥🥗")
+        st.error("🚨 Obesity – Takecare of your health! 🏥🥗")
 
 else:
     st.info("⚠️ Please enter a valid **weight and height** to calculate BMI. 😃")
